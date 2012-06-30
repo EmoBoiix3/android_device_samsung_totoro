@@ -51,17 +51,17 @@ BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
 # Misc
 WITH_JIT := true
 ENABLE_JSC_JIT := true
-JS_ENGINE := v8
+#JS_ENGINE := v8
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_FORCE_STATIC_A2DP := true
 
-# usb
-BOARD_USE_USB_MASS_STORAGE_SWITCH := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/lm-2/gadget/lun0/file"
-BOARD_UMS_LUNFILE := "/sys/devices/lm-2/gadget/lun0/file"
+# usb for ICS, but this is GB
+#BOARD_USE_USB_MASS_STORAGE_SWITCH := true
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/lm-2/gadget/lun0/file"
+#BOARD_UMS_LUNFILE := "/sys/devices/lm-2/gadget/lun0/file"
 
 BOARD_NAND_PAGE_SIZE := 4096 -s 128
 BOARD_KERNEL_CMDLINE := console=ttyS0 no_console_suspend
@@ -70,6 +70,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 TARGET_PREBUILT_KERNEL := device/samsung/totoro/kernel	
 TARGET_RECOVERY_INITRC := device/samsung/totoro/recovery.rc
 
+# device sizes, ain't it?
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 233308160
